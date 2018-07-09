@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   let data=1;
+   setTimeout(function(data){
+       console.log(data)
+   });
+   /* 函数执行时，如果有形参，会将行参加入到函数的作用域中 。
+   这里setTimeout里面的函数从任务队列中拿到执行栈执行时，虽然在全局作用域下执行，但是因为本身
+   函数作用域中有了data变量，就用的函数内的变量，这个变量是定义了，但是没被赋值。
+   */
+</script>
+</html>

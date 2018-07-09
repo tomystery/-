@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            background: yellow;
+        }
+        .wrapper div{
+            width: 100px;
+            height: 100px;
+            transform-origin: left top;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            box-sizing: border-box;
+            background: #222222;
+        }
+       .wrapper div:nth-child(1){
+            transform: rotate(180deg)skew(30deg);
+        }
+        .wrapper div:nth-child(2){
+            transform: rotate(-60deg)skew(30deg);
+        }
+        .wrapper div:nth-child(3){
+            transform: rotate(60deg)skew(30deg);
+        } 
+    </style>
+</head>
+<body>
+    <div class='wrapper'>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

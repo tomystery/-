@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .toggle {
+            width: 32px;
+            height: 17px;
+            background: #333;
+            margin: 20px auto;
+            position: relative;
+            border-radius: 50px;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
+            0px 1px 0px rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+        .toggle:after {
+            content:'';
+            position: absolute;
+            z-index: 0;
+            background-color:#ccc;
+            width: 32px;
+            height: 17px;
+        }
+
+        .toggle:before {
+            content:'';
+            position: absolute;
+            z-index: 0;
+            background-color:blue;
+            width: 32px;
+            height: 17px;
+        }
+        
+
+       
+        .toggle label{
+            display: block;
+            width: 14px;
+            height: 14px;
+            cursor: pointer;
+            position: absolute;
+            z-index: 1;
+            top:1px;
+            left:0;
+            background: #fcfff4;
+            background: linear-gradient(top,#fcfff4 0%,#dfe5d7 40%,#b3bead 100%);
+            border-radius: 7px;
+            transition: 7px;
+            transition: all 0.4s ease;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3)
+        }
+
+        .toggle input[type=checkbox] {
+            visibility: hidden;
+        }
+
+        .toggle input:checked+label {
+            left: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toggle">
+        <input type='checkbox' checked id='t'>
+        <label for="t"></label>
+    </div>
+</body>
+
+</html>

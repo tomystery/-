@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<Script>
+   function  setStorage(name, data) {
+        let dataType = typeof data;
+        // json对象
+        if (dataType === 'object') {
+            window.localStorage.setItem(name, JSON.stringify(data));
+        }
+        // 基础类型
+        else if (['number', 'string', 'boolean'].indexOf(dataType) >= 0) {
+            window.localStorage.setItem(name, data);
+        }
+        // 其他不支持的类型
+        else {
+            alert('该类型不能用于本地存储');
+        }
+    }
+
+
+    function getStorage(name) {
+        let data = window.localStorage.getItem(name);
+        if (data) {
+            return JSON.parse(data);
+        }
+        else {
+            return '';
+        }
+    }
+
+
+var userInfo={
+    a1:'111',
+    a2:'111',
+    a3:'111'
+   
+}
+    setStorage(userInfo1,userInfo)
+   console.log(getStorage(userInfo1)) 
+</Script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr1 = [1, 2, 3, 4];
+    let arr2 = [1, 2, 3, 4];
+
+    arr1 = arr1.sort((a, b) => a - b);
+
+    arr2 = arr2.sort((a, b) => b - a);
+
+
+    let min = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        min += arr1[i] * arr2[i]
+    }
+
+    console.log(min);
+</script>
+
+</html>

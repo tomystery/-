@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="demo1">
+           <button onclick="printInputValue()">获取input元素value值</button>
+           <p id="demo2"></p>
+    
+</body>
+<Script>
+   function printInputValue() {
+            var inputValue = document.getElementById("demo1").value;
+            console.log(inputValue);
+             document.getElementById("demo2").innerHTML = inputValue;
+             console.log( /(?!^(\d+|[a-zA-Z]+|[-&:";'<>,=%~!@#\(\)\$\^\*\+\|\{\}\[\]\.\?\/]+)$)^[\w-&:";'<>,=%~!@#\(\)\$\^\*\+\|\{\}\[\]\.\?\/]{6,16}$/.test(inputValue))
+         }
+
+</Script>
+</html>

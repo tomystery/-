@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var myObj = Object.create({}, {
+        getFoo: {
+            value: function () { return this.foo; }
+        }
+    });
+    myObj.foo = 100;
+    myObj.foo1 = 10;
+    console.log(myObj);
+    console.log(Object.keys(myObj));
+
+
+    var calendar = {
+        sunday: {
+            breakfast: null,
+            lunch: null,
+            dinner: null
+        },
+        monday: {
+            breakfast: null,
+            lunch: null,
+            dinner: null
+        },
+        tuesday: {
+            breakfast: null,
+            lunch: null,
+            dinner: null
+        },
+        wednesday: {
+            breakfast: null,
+            lunch: null,
+            dinner: null
+        },
+        thursay: {
+            breakfast: null,
+            lunch: null,
+            dinner: null
+        },
+        friday: {
+            breakfast: null,
+            lunch: null,
+            dinner: null
+        },
+        saturday: {
+            breakfast: null,
+            lunch: null,
+            dinner: null
+        }
+    }
+
+     const dayOrder = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+     
+</script>
+
+</html>

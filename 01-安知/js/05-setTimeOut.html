@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        button {
+            background: #0976cd;
+            padding: 0 15px;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            margin: 0 5px;
+            line-height: 32px;
+        }
+
+        button.disabled {
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #ccc;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>点击按钮，在等待 3 秒后弹出 "Hello"。</p>
+    <button   onclick="myFunction()">点我</button>
+
+    <script>
+        var btn=document.getElementsByTagName('button')
+      
+        function myFunction() {
+            setTimeout(function () {
+              btn.classList.add('diasbled')
+                 
+                 }, 3000);
+        }
+    </script>
+
+</body>
+
+</html>

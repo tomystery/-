@@ -1,0 +1,54 @@
+{{#list}}
+<div class="prefer-list-item">
+    <div class="nr-prefer-part" data-prefer-id="{{id}}">
+        <p class="title">
+            <i>{{time}}</i>
+            <i class="iconfont prefer-delete">&#xe67f;</i>
+        </p>
+        <table class="body">
+            <tr>
+                <th class="colspan1">分类</th>
+                <td colspan="2">{{classify}}</td>
+            </tr>
+            <tr>
+                <th rowspan="2" class="colspan1">区间</th>
+                <td>
+                    <i>{{1stTitle}}:</i>
+                    <i>{{1stValue}}</i>
+                </td>
+                <td>
+                    <i>{{2stTitle}}：</i>
+                    <i>{{2stValue}}</i>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <i>{{3stTitle}}:</i>
+                    <i>{{3stValue}}</i>
+                </td>
+                <td>
+                    <i>{{4stTitle}}:</i>
+                    <i>{{4stValue}}</i>
+                </td>
+            </tr>
+            <tr>
+                <th class="colspan1">卖家</th>
+                <td colspan="2">{{sellerType}}</td>
+            </tr>
+            <tr>
+                <th>品牌</th>
+                <td>{{brandName}}</td>
+                <td rowspan="2">
+                    <p class="btn-select">筛选</p>
+                </td>
+            </tr>
+            <tr>
+                <th>卖家名称</th>
+                <td>{{sellerName}}</td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+{{/list}}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script src="http://www.zeptojs.cn/zepto.min.js"></script>
+
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        *{
+            margin:0px;
+            padding:0px;
+            font-size:16px;
+        }
+        ul,li{list-style: none;}
+        a{
+            color: #333;
+            text-decoration: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        .multi-menu-wrap li:hover,
+        .active{
+            background: #f2dede;
+        }
+        .multi-menu-wrap,
+        .multi-menu-wrap ul{
+            width:100px;
+        }
+
+        .multi-menu-wrap li{
+            padding: 5px;
+            line-height:40px;
+            position: relative;
+        }
+        .multi-menu-wrap a{
+            display: block;
+
+        }
+
+        .multi-first-list{
+            background: #2b542c;
+        }
+        .multi-first-list ul{
+            position: absolute;
+            left: 100px;
+            top: 0px;
+        }
+        .multi-first-list > li{
+            background: #adadad;
+        }
+
+        .multi-second-list > li{
+            background: #9d9d9d;
+        }
+        .multi-third-list > li{
+            background: #8c8c8c;
+        }
+
+        .sub-menu{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="multi-menu-wrap" id="multi-menu-wrap"></div>
+
+<script type="text/babel">
+
+    var menu = {
+        className : 'multi-first-list',
+        levelItm : [
+            {
+                title : '一级菜单-1'
+            },
+            {
+                title : '一级菜单-2',
+                className : 'multi-second-list sub-menu',
+                levelItm : [
+                    {
+                        title : '二级菜单-1'
+                    },
+                    {
+                        title : '二级菜单-2'
+                    },
+                    {
+                        title : '二级菜单-3'
+                    },
+                    {
+                        title : '二级菜单-4',
+                        className : 'multi-third-list sub-menu',
+                        levelItm : [
+                            {
+                                title : '三级菜单-1'
+                            },
+                            {
+                                title : '三级菜单-2',
+                            },
+                            {
+                                title : '三级菜单-3'
+                            },
+                            {
+                                title : '三级菜单-4'
+                            },
+                            {
+                                title : '三级菜单-5',
+                                className : 'multi-third-list sub-menu',
+                                levelItm : [
+                                    {
+                                        title : '四级菜单-1'
+                                    },
+                                    {
+                                        title : '四级菜单-2',
+                                    },
+                                    {
+                                        title : '四级菜单-3'
+                                    },
+                                    {
+                                        title : '四级菜单-4'
+                                    },
+                                    {
+                                        title : '四级菜单-5'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title : '二级菜单-5'
+                    }
+                ]
+            },
+            {
+                title : '一级菜单-3'
+            },
+            {
+                title : '一级菜单-4'
+            },
+            {
+                title : '一级菜单-5'
+            }
+        ]
+    };
+
+    class MultiList extends React.Component{
+        constructor(){
+            super();
+        }
+        componentDidMount () {
+            //这么操作总感觉有问题
+            $("#multi-menu-wrap li").on('touchend',function(){
+
+                $(this).siblings().find('ul').css("display","none");
+
+                $(this).children("ul").css("display","block");
+                $(this).addClass("active");
+
+            })
+
+        }
+        render(){
+            return (
+                <ul className={this.props.menu.className}>
+                    {
+                        this.props.menu.levelItm.map(function (item) {
+                            return (
+                                    <li ref="itemLi">
+                                        <a href="javascript:;">{item.title}</a>
+                                        {
+                                            !item.className ? "" : <MultiList menu={item} />
+                                        }
+                                    </li>
+                            )
+                        })
+                    }
+                </ul>
+            )
+        }
+    }
+
+    class MultiMenu extends React.Component{
+        constructor(){
+            super();
+        }
+        render(){
+            return (
+                <MultiList menu={this.props.menu} />
+            )
+        }
+    }
+
+
+    ReactDOM.render(
+        <MultiMenu menu={menu} />,
+        document.getElementById('multi-menu-wrap')
+    )
+
+
+
+
+</script>
+
+
+</body>
+</html>

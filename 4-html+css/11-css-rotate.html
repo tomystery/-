@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            /* position: relative; */
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            margin: 200px auto;
+        }
+
+        #div2 {
+            width: 200px;
+            height: 200px;
+            /* position: absolute; */
+            border: 1px solid black;
+            background-color: red;
+            /* transform: rotate(45deg); */
+           
+            /* Safari and Chrome */
+        }
+        
+        #div2:hover{
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">
+        <div id="div2">HELLO</div>
+    </div>
+
+</body>
+
+</html>

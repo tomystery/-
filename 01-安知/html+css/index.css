@@ -1,0 +1,194 @@
+
+.page{
+    width: 100%;
+    overflow-x:hidden;
+}
+
+
+/*--dashboard-landing*/
+/* 三个标签*/
+.nr-prefer-title .dashboard-landing {
+    margin-bottom: 25px;
+}
+
+.nr-prefer-title .dashboard-landing>.row>ul>li {
+    width: 72px;
+    height: 59px;
+    margin-left: 49px;
+    float: left;
+    font-size: 16px;
+    line-height: 59px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.nr-prefer-title .dashboard-landing>.row>ul>li:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #0f88eb;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transition: all .8s;
+}
+
+.nr-prefer-title .dashboard-landing>.row .active {
+    border-bottom: 2px solid #0f88eb;
+    color: #0f88eb;
+}
+
+.nr-prefer-title .dashboard-landing>.row>ul>li:hover:after {
+    left: 0%;
+    width: 100%;
+}
+
+.nr-prefer-title .dashboard-landing>.row>ul>li:hover {
+    color: #0f88eb;
+}
+
+
+/*dashboard-landing--*/
+
+
+/*--nr-prefer*/
+
+.nr-prefer-content .nr-prefer-part {
+    background-color: #fff;
+    /*margin-right: 20px;*/
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.nr-prefer-content .prefer-list-item:nth-child(2n+1) .nr-prefer-part {
+    margin-right: 20px;
+}
+
+.nr-prefer-content .nr-prefer-part:hover {
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+    z-index: 2;
+}
+
+
+.nr-prefer-content .nr-prefer-part i {
+    font-style: normal;
+}
+
+.nr-prefer-content .nr-prefer-part .title {
+    height: 59px;
+    line-height: 60px;
+    padding-left: 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.nr-prefer-content .nr-prefer-part .body {
+    padding-left: 20px;
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+
+.nr-prefer-content .nr-prefer-part i.iconfont {
+    font-size: 16px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #cccccc;
+}
+
+.nr-prefer-contentr .nr-prefer-part i.iconfont:hover {
+    color: #4b6373;
+}
+
+.nr-prefer-content .nr-prefer-part .btn-select {
+   
+    right: 20px;
+    width: 103px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    background-color: #2999f4;
+    -moz-border-radius: 18px;
+    /* Firefox */
+    -webkit-border-radius: 18px;
+    /* Safari 和 Chrome */
+    border-radius: 18px;
+    /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    color: #fff;
+    font-size: 17px;
+    
+    cursor: pointer;
+}
+
+.nr-prefer-content .nr-prefer-part .btn-select:hover {
+    background-color: #0f88eb;
+}
+
+.nr-prefer-content .nr-prefer-part .row {
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 20px;
+}
+
+.nr-prefer-content .nr-prefer-part .colspan1 {
+    font-weight: 700;
+}
+
+.nr-prefer-content .nr-prefer-part .colspan2 {
+    padding-top: 27px;
+}
+
+/*nr-prefer--*/
+
+
+
+/*--nr-error*/
+.nr-prefer-error>img{
+    margin:0 auto;
+}
+.nr-prefer-error>p{
+    text-align: center;
+}
+/*nr-error--*/
+
+
+
+/* -弹窗*/
+
+.nr-prefer-modal-wrap .modal-header {
+    position: relative;
+}
+.nr-prefer-modal-wrap .modal-title {
+    position: relative;
+    padding: 20px 30px;
+}
+.nr-prefer-modal-wrap .modal-body {
+    display: flex;
+    padding-bottom: 30px;
+}
+.nr-prefer-modal-wrap .modal-body>p {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+.nr-prefer-modal-wrap .modal-body p span:hover {
+    background-color: #0f88eb;
+}
+.nr-prefer-modal-wrap .modal-body span {
+    width: 70px;
+    height: 32px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #38a1f6;
+    display: inline-block;
+    border-radius: 30px;
+    cursor: pointer;
+}

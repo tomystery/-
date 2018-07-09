@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("p").on("click", function () {
+                console.log($(this))
+                $(this).animate({ fontSize: "+=6px" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+    <p>请点击 p 元素增加其内容的文本大小。每个 p 元素只会触发一次改事件。</p>
+</body>
+
+</html>

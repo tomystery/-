@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        body {
+            background: red;
+        }
+
+        .left {
+            width: 200px;
+            height: 1000px;
+            float: left;
+            background: green;
+           
+        }
+        .right{
+            overflow: hidden;
+            background-color: #ccc;
+           
+            height: 1000px;
+        }
+        .top{
+            width: 100%;
+            height: 70px;
+            background-color: yellow;
+        }
+        .wrap-container{
+            width: 1200px;
+            height: 900px;
+            margin-top:50px;
+            margin:0 auto;
+            background: violet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main clearfix">
+        <div class="left"></div>
+        <div class="right">
+            <div class="top"></div>
+            <div class="warp">
+                <div class="wrap-container"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
